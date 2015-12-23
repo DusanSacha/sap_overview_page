@@ -1,0 +1,48 @@
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+    xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="NorthwindModel" sap:schema-version="1" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+            <Annotations Target="NorthwindModel.Invoice" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Qualifier="Top5Invoices" Term="com.sap.vocabularies.UI.v1.LineItem">
+                    <Collection>
+                        <Record Type="com.sap.vocabularies.UI.v1.DataField">
+                            <Annotation EnumMember="com.sap.vocabularies.UI.v1.ImportanceType/High" Term="com.sap.vocabularies.UI.v1.Importance" />
+                            <PropertyValue Path="ProductName" Property="Value"/>
+                        </Record>
+                        <Record Type="com.sap.vocabularies.UI.v1.DataField">
+                            <Annotation EnumMember="com.sap.vocabularies.UI.v1.ImportanceType/High" Term="com.sap.vocabularies.UI.v1.Importance" />
+                            <PropertyValue Path="ShipName" Property="Value"/>
+                        </Record>                       
+                        <Record Type="com.sap.vocabularies.UI.v1.DataField">
+                            <Annotation EnumMember="com.sap.vocabularies.UI.v1.ImportanceType/High" Term="com.sap.vocabularies.UI.v1.Importance" />
+                            <PropertyValue Path="ExtendedPrice" Property="Value"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="NorthwindModel.Products_by_Category" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+            	<Annotation Term="com.sap.vocabularies.UI.v1.DataPoint" Qualifier="Status">
+					<Record Type="com.sap.vocabularies.UI.v1.DataPointType">
+						<PropertyValue Property="Value" Path="UnitsInStock"/>
+					</Record>
+				</Annotation>
+                <Annotation Qualifier="Top5OutOfStock" Term="com.sap.vocabularies.UI.v1.LineItem">
+                    <Collection>
+                        <Record Type="com.sap.vocabularies.UI.v1.DataField">
+                            <Annotation EnumMember="com.sap.vocabularies.UI.v1.ImportanceType/High" Term="com.sap.vocabularies.UI.v1.Importance"/>
+                            <PropertyValue Property="Value">
+                                <Apply Function="odata.concat">
+                                    <Path>ProductName</Path>
+                                </Apply>
+                            </PropertyValue>
+                        </Record>
+                        <Record Type="com.sap.vocabularies.UI.v1.DataFieldForAnnotation" Qualifier="WeightMeasure">
+            				<PropertyValue Property="Label" String="Status"/>
+            				<PropertyValue Property="Target" AnnotationPath="@com.sap.vocabularies.UI.v1.DataPoint#Status"/>
+        				</Record>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

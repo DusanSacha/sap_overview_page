@@ -1,0 +1,37 @@
+{
+  "run": [
+    {
+      "filePath": "/MyOverviewPage/webapp/Component.js",
+      "previewMode": 1,
+      "dataMode": 1,
+      "workspace": "withoutWorkspace",
+      "ui5ActiveVersion": "1.32.4",
+      "ui5VerSource": "external",
+      "isDefaultVersion": 1,
+      "urlParameters": [
+        {
+          "paramName": "",
+          "paramValue": "",
+          "paramActive": false
+        },
+        {
+          "paramName": "",
+          "paramValue": "",
+          "paramActive": false
+        }
+      ],
+      "hashParameter": "",
+      "backendSystem": [
+        {
+          "source": "Northwind",
+          "destinations": "Northwind"
+        }
+      ],
+      "_metadata": {
+        "id": 8657005,
+        "runnerId": "fiorirunner",
+        "displayName": "New SAP Fiori Component on Sandbox 6"
+      }
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "generation": [
+    {
+      "templateId": "OVP.smartovptemplate",
+      "templateVersion": "1.0.0",
+      "dateTimeStamp": "Wed, 23 Dec 2015 11:50:39 GMT"
+    },
+    {
+      "templateId": "OVP.cardtemplate",
+      "templateVersion": "0.0.0",
+      "dateTimeStamp": "Wed, 23 Dec 2015 12:53:30 GMT"
+    }
+  ],
+  "mockpreview": {
+    "mockUri": "/destinations/Northwind/V3/Northwind/Northwind.svc",
+    "metadataFilePath": "",
+    "loadJSONFiles": false,
+    "loadCustomRequests": false,
+    "mockRequestsFilePath": ""
+  },
+  "translation": {
+    "translationDomain": "",
+    "supportedLanguages": "en,fr,de",
+    "defaultLanguage": "en",
+    "defaultI18NPropertyFile": "i18n.properties",
+    "resourceModelName": "i18n"
+  },
+  "hcpdeploy": {
+    "account": "s0014210089trial",
+    "name": "myoverviewpage",
+    "lastVersionWeTriedToDeploy": "1.0.0"
+  }
+}
