@@ -1,0 +1,110 @@
+{
+	"_version": "1.1.0",
+	"start_url": "start.html",
+	"sap.app": {
+		"_version": "1.1.0",
+		"id": "com.cadaxo.app",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.2.2"
+		},
+		"title": "{{app_title}}",
+		"description": "{{app_description}}",
+		"ach": "sap",
+		"resources": "resources.json",
+		"dataSources": {
+			"NorthwindModel": {
+				"uri": "/destinations/Northwind/V3/Northwind/Northwind.svc/",
+				"type": "OData",
+				"settings": {
+					"annotations": [
+						"localAnnotations_1"
+					],
+					"localUri": "localService/metadata.xml"
+				}
+			},
+			"localAnnotations_1": {
+				"uri": "annotations/localAnnotations_1.xml",
+				"type": "ODataAnnotation",
+				"settings": {
+					"localUri": "annotations/localAnnotations_1.xml"
+				}
+			}
+		},
+		"sourceTemplate": {
+			"id": "OVP.cardtemplate",
+			"version": "0.0.0"
+		}
+	},
+	"sap.ui": {
+		"_version": "1.2.0",
+		"technology": "UI5",
+		"icons": {
+			"icon": "sap-icon://dimension"
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"supportedThemes": [
+			"sap_hcb",
+			"sap_bluecrystal"
+		]
+	},
+	"sap.ui5": {
+		"_version": "1.1.0",
+		"dependencies": {
+			"minUI5Version": "1.32.0",
+			"libs": {
+				"sap.ovp": {
+					"minVersion": "1.32.0"
+				}
+			}
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"uri": "i18n/i18n.properties"
+			},
+			"NorthwindModel": {
+				"dataSource": "NorthwindModel",
+				"settings": {}
+			}
+		},
+		"extends": {
+			"component": "sap.ovp.app",
+			"minVersion": "1.32.0",
+			"extensions": {}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		}
+	},
+	"sap.ovp": {
+		"_version": "1.1.0",
+		"globalFilterModel": "NorthwindModel",
+		"globalFilterEntityType": "",
+		"cards": {
+			"card00": {
+				"model": "NorthwindModel",
+				"template": "sap.ovp.cards.list",
+				"settings": {
+					"listType": "condensed",
+					"listFlavor": "bar",
+					"sortBy": "UnitsInStock",
+					"sortOrder": "ASC",
+					"annotationPath": "com.sap.vocabularies.UI.v1.LineItem#Top5OutOfStock",
+					"category": "Last Items In Storage",
+					"entitySet": "Products_by_Categories"
+				}
+			}
+		}
+	},
+	"sap.platform.hcp": {
+		"uri": "webapp",
+		"_version": "1.1.0"
+	}
+}
