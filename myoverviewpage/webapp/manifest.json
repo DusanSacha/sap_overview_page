@@ -92,16 +92,42 @@
 				"model": "NorthwindModel",
 				"template": "sap.ovp.cards.list",
 				"settings": {
+					"listType": "extended",
+					"listFlavor": "standard",
+					"sortBy": "HireDate",
+					"sortOrder": "ASC",
+					"annotationPath": "com.sap.vocabularies.UI.v1.LineItem#Top5Employees",
+					"category": "Top 5 Long Working Employees",
+					"entitySet": "Employees"
+				}
+			},
+			"card01": {
+				"model": "NorthwindModel",
+				"template": "sap.ovp.cards.list",
+				"settings": {
+					"listType": "extended",
+					"listFlavor": "bar",
+					"sortBy": "ReorderLevel",
+					"sortOrder": "DESC",
+					"annotationPath": "com.sap.vocabularies.UI.v1.LineItem#TopReorderProducts",
+					"category": "Top 5 Reordered Products",
+					"entitySet": "Products"
+				}
+			},
+			 "card02": {
+				"model": "NorthwindModel",
+				"template": "sap.ovp.cards.list",
+				"settings": {
 					"listType": "condensed",
 					"listFlavor": "standard",
 					"sortBy": "ExtendedPrice",
 					"sortOrder": "DESC",
 					"annotationPath": "com.sap.vocabularies.UI.v1.LineItem#Top5Invoices",
-					"category": "{{card00_category}}",
+					"category": "Top 5 Invoices",
 					"entitySet": "Invoices"
 				}
 			},
-			"card01": {
+			"card03": {
 				"model": "NorthwindModel",
 				"template": "sap.ovp.cards.list",
 				"settings": {
@@ -110,7 +136,7 @@
 					"sortBy": "UnitsInStock",
 					"sortOrder": "ASC",
 					"annotationPath": "com.sap.vocabularies.UI.v1.LineItem#Top5OutOfStock",
-					"category": "{{card01_category}}",
+					"category": "Last Items In Storage",
 					"entitySet": "Products_by_Categories"
 				}
 			}
