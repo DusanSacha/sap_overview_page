@@ -2,23 +2,26 @@
 
 ##SAPUI5 project
 
-Example of SAP Overview Page
+Example project of SAP Overview Pages
 
-Currently:
+Project was created in SAP WEB IDE
 
 * Condensed List Card with Standard Flavor
 * Condensed List Card with Bar Flavor
 * Extended List Card with Standard Flavor
 * Extended List Card with Bar Flavor
 
-Made by:
+You can download and run the project in SAP WEB IDE on SAP HANA Cloud Platform as SAP Fiori Component Sandbox.
+
+Or you can check the examples of [annotation files](myoverviewpage/webapp/annotations/) and [card settings](myoverviewpage/webapp/) - manifest_*.json files
+
+As a data source I used [Northwind V3 Service](http://services.odata.org/V3/Northwind/Northwind.svc/).
+
+For more information about this project and further information, please check [this blog post](http://www.cadaxo.com/user-experience/sap-overview-page-example-list-card/).
+
+##Author
 Dusan Sacha
-Consultant
+dusan.sacha@cadaxo.com
 
-Mobil: +43 699 / 106 65 740
-eMail: dusan.sacha@cadaxo.com
-
-Cadaxo GmbH, Weyrgasse 9/3, 1030 Wien
-
+Cadaxo
 www.cadaxo.com
-www.facebook.com/CadaxoGmbH
